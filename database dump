@@ -1,0 +1,28 @@
+This is the architecture of patient table here psychiatrist is used as a secondary key for patient table
+
+| Field        | Type         | Null | Key | Default | Extra |
++--------------+--------------+------+-----+---------+-------+
+| name         | varchar(255) | YES  |     | NULL    |       |
+| Address      | varchar(255) | YES  |     | NULL    |       |
+| Email        | varchar(255) | YES  |     | NULL    |       |
+| Phone_no     | int          | YES  |     | NULL    |       |
+| Password     | varchar(255) | YES  |     | NULL    |       |
+| photo        | varchar(255) | YES  |     | NULL    |       |
+| psychiatrist | int          | YES  |     | NULL    |       |
++--------------+--------------+------+-----+---------+-------+
+
+This is the structure psychiatrist table in this phone is used as primary key and secondary key in patient table.
++---------------+--------------+------+-----+---------+-------+
+| Field         | Type         | Null | Key | Default | Extra |
++---------------+--------------+------+-----+---------+-------+
+| LastName      | varchar(255) | YES  |     | NULL    |       |
+| FirstName     | varchar(255) | YES  |     | NULL    |       |
+| Hospital_name | varchar(255) | YES  |     | NULL    |       |
+| phone_no      | int          | NO   | PRI | NULL    |       |
+| pincode       | int          | YES  |     | NULL    |       |
+| state         | varchar(255) | YES  |     | NULL    |       |
++---------------+--------------+------+-----+---------+-------+
+
+Query for inserting data in psychiatrist table.
+
+insert into psychiatrist (lastname,firstname,hospital_name,phone_no,pincode,state) values ("lastname","firstname","hospital_name",phone_no,pincode,"state");
